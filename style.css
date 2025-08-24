@@ -106,6 +106,7 @@ nav ul {
     width: 100%;
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD:Style.css
     margin-top: 10px;
     font-weight: 200;
 }
@@ -166,3 +167,6 @@ nav ul {
     font-size:14px;
 }
 
+=======
+}
+>>>>>>> 92c80aa49293e46f3c81dc93d4c241bff9d5793d:style.css
