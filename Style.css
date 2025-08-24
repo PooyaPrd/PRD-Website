@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Yekan Bakh;
+    src: url(./Assets/font/YekanBakh-VF.ttf) format('truetype-variations'),
+         url(./Assets/font/YekanBakh-VF.woff) format('woff-variations'),
+         url(./Assets/font/YekanBakh-VF.woff2) format('woff2-variations');
+
+    font-weight: 100 900;
+    font-style: normal;
+}
+
 * {
     direction: rtl;
     padding: 0;
@@ -16,8 +26,8 @@ body {
 }
 
 header {
-    margin: 80px;
-    font-size:80px;
+    margin: 50px;
+    font-size:35px;
 }
 
 nav {
@@ -27,17 +37,17 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ffffff;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 30px;
     align-items: center;
     padding: 0;
-    font-size: 35px;
+    font-size: 18px;
     font-weight: 300;
 }
 
@@ -51,8 +61,8 @@ nav ul {
 }
 
 .bigtitle{
-    padding-top: 60px;
-    font-size: 90px;
+    padding-top: 30px;
+    font-size: 60px;
     font-family: IranSansX;
     font-weight: 900;
 }
@@ -61,15 +71,16 @@ nav ul {
     display: flex;
     display: row;
     width: 75%;
-    padding-top: 70px;
+    padding-top: 40px;
     /* justify-content: space-between; */
     gap:7%;
     
 }
 
 #hero-img{
-    width: 1700px;
-    border-radius: 30px;
+    width: 500px;
+    height: 350px;
+    border-radius: 20px;
 }
 
 #section{
@@ -80,7 +91,7 @@ nav ul {
 }
 
 .h2{
-    font-size: 70px;
+    font-size: 40px;
     text-align: right;
 
 }
@@ -88,10 +99,70 @@ nav ul {
 .hero-text{
     display: flex;
     flex-direction: column;
+    gap:25px
 }
 
-.hero-des{
+#hero-des{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 200;
 }
+
+.tags{
+    display: flex;
+    width: 40%;
+    direction: ltr;
+    justify-content: space-between;
+}
+
+#tags-or{
+    color:orange;
+}
+#tags-bl{
+    color:pink;
+}
+#tags-wh{
+    color:greenyellow;
+}
+
+#hero-long{
+    font-weight: 200;
+}
+
+.blog-posts{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px;
+}
+
+.post{
+    width: 320px;
+}
+.post-h2{
+    font-size: 18px;
+    padding: 10px 0px 15px;
+    font-weight: 600;
+}
+
+.post-p{
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.post-img{
+    border-radius: 10px;
+    width: 320px;
+}
+
+.post-des{
+    margin-top:20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 200;
+    font-size:14px;
+}
+
