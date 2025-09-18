@@ -1,22 +1,15 @@
 const phoneInput = document.getElementById('phone-input');
-const eyes = document.querySelectorAll('.eye'); 
-const maxMove = 6; 
-const maxLength = 11; 
+const eyes = document.querySelectorAll('.eye');
+const maxMove = 6;
+const maxLength = 11;
 
 function updateEyePosition() {
-    // این خط به اول تابع منتقل شده
-    const inputLength = phoneInput.value.length; 
-
-    if (inputLength === maxLength) { 
-        // در اینجا می توانید کدی برای وقتی که تعداد کاراکترها به 11 رسید اضافه کنید.
-        // مثلاً: نمایش یک پیام یا تغییر استایل چشم‌ها.
-    }
-
+    const inputLength = phoneInput.value.length;
     const progress = Math.min(inputLength / maxLength, 1);
     const newX = -maxMove + (progress * maxMove * 2);
 
     eyes.forEach(eye => {
-        eye.style.transform = translateX(${newX}px);
+        eye.style.transform = `translateX(${newX}px)`;
     });
 }
 
@@ -26,14 +19,16 @@ function unFocus() {
     });
 }
 
-let timeout; 
-phoneInput.addEventListener('input', updateEyePosition);
+// گوش دادن به رویداد keyup برای تشخیص دقیق تایپ
+phoneInput.addEventListener('keyup', updateEyePosition);
+
+// استفاده از focus برای شروع حرکت چشم‌ها
 phoneInput.addEventListener('focus', updateEyePosition);
-phoneInput.addEventListener('focusout', (e) => {
-    timeout = setTimeout(() => {
-        if (!phoneInput.contains(document.activeElement)) {
-            unFocus(); 
-        }
-    });
+
+// استفاده از blur به جای focusout برای رفتار پایدارتر
+phoneInput.addEventListener('blur', () => {
+    unFocus();
 });
+
+// برای اطمینان از اینکه چشم‌ها در ابتدا در حالت unFocus هستند
 unFocus();
