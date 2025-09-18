@@ -6,6 +6,9 @@ const maxLength = 11;
 
 
 function updateEyePosition() {
+    if(inputLength==11){
+        
+    }
     const inputLength = phoneInput.value.length;
     const progress = Math.min(inputLength / maxLength, 1);
     const newX = -maxMove + (progress * maxMove * 2);
