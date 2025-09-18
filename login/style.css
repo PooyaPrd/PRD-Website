@@ -1,5 +1,10 @@
-
+@font-face {
+    font-family: YekanBakh;
+    src: url(./YekanBakhFaNum-Bold.ttf),
+    url(./YekanBakhFaNum-Bold.woff) format('woff'); 
+}
 body {
+    font-family: YekanBakh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,11 +33,12 @@ svg {
     margin-top: 20px;
     direction: ltr;
     letter-spacing: 12px;
+    font-family: YekanBakh;
 }
 
 #phone-input:focus {
     outline: none;
-    border-color: #ff9800;
+    border-color: #aa00c4;
 }
 
 
